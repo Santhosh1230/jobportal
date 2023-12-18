@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MCOMPANIES.Master.cs" Inherits="jobportal.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <form id="form1" runat="server">
+        <div><div class="header"><div class="logo">
+
+            
+            <%--<asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/imagess/naukri_Logo.png" NavigateUrl="~/ahome.aspx" />--%>
+            <asp:HyperLink ID="HyperLink4" runat="server" ImageUrl="~/imagess/naukri_Logo.png" NavigateUrl="~/CHOME.aspx"></asp:HyperLink>
+            </div>
+    <div class="Nav">        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/CPOSTJOB.aspx" Class="jobh">Post New Jobs</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/CVEIWPOST.aspx" Class="companiesh">My Job Post</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/CMYACCOUNT.aspx" Class="serviceh">My Account</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/ASERVICE.aspx" Class="serviceh">Profile Matches</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/ASERVICE.aspx" Class="serviceh">Applied Jobs</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/ASERVICE.aspx" Class="serviceh">Change Password</asp:HyperLink>
+        
+            
+    </div>
+            <div class="LButton" > <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder><%--<asp:Button ID="Button1" runat="server" Text="LOGIN" Class="loginb" /><asp:Button ID="Button2" runat="server" Text="Register" CssClass="registerb" />
+           --%></div>     
+           
+        
+            </div>
+            
+           <div class="mid" align="center"><asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>   </div> 
+        </div>
+    </form>
+</body>
+</html>

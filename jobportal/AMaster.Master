@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AMaster.Master.cs" Inherits="jobportal.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link  rel="stylesheet"href="StyleSheet1.css?version=1" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div><div class="header"><div class="logo">
+
+           
+            <asp:HyperLink ID="HyperLink4" runat="server" ImageUrl="~/imagess/naukri_Logo.png" NavigateUrl="~/ahome.aspx"> </asp:HyperLink>
+            </div>
+    <div class="Nav">        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AJOB.aspx" Class="jobh">Jobs</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ACOMPANIES.aspx" Class="companiesh">Companies</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ASERVICE.aspx" Class="serviceh">Admin</asp:HyperLink></div>
+            <div class="LButton" > <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder><%--<asp:Button ID="Button1" runat="server" Text="LOGIN" Class="loginb" /><asp:Button ID="Button2" runat="server" Text="Register" CssClass="registerb" />
+           --%></div>     
+           
+        
+            </div>
+
+         
+        </div>
+  <div class="mid" ><asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>   </div>   
+        
+    </form>
+</body>
+</html>
