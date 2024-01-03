@@ -4,12 +4,19 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> <div class="LButton" ><asp:Button ID="Button2" runat="server" Text="Logout" CssClass="registerb" OnClick="Button2_Click"/></div>   </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <br />
-    <asp:DataGrid ID="DataGrid1" runat="server" OnCancelCommand="DataGrid1_CancelCommand" OnDeleteCommand="DataGrid1_DeleteCommand" OnEditCommand="DataGrid1_EditCommand" OnSelectedIndexChanged="DataGrid1_SelectedIndexChanged" OnUpdateCommand="DataGrid1_UpdateCommand">
+    
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="JobID" OnRowEditing="GridView1_RowEditing" OnRowUpdated="GridView1_RowUpdated" OnRowUpdating="GridView1_RowUpdating">
         <Columns>
-            <asp:EditCommandColumn CancelText="Cancel" EditText="Edit" UpdateText="Update"></asp:EditCommandColumn>
-            <asp:ButtonColumn CommandName="Delete" Text="Delete"></asp:ButtonColumn>
+            <asp:BoundField DataField="JobID" HeaderText="JOBID" ReadOnly="True" />
+            <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" />
+            <asp:BoundField DataField="DegreeRequired" HeaderText="QUALIFICATION" />
+            <asp:BoundField DataField="Skill" HeaderText="Skills" />
+            <asp:BoundField DataField="Salary" HeaderText="CTC" />
+            <asp:BoundField DataField="Experience" HeaderText="Experience" />
+            <asp:BoundField DataField="NumberOfVacancies" HeaderText="NumberOfVacancies" />
+            <asp:CommandField ButtonType="Button" ShowEditButton="True" />
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
         </Columns>
-    </asp:DataGrid>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+    </asp:GridView>
 <br />
 </asp:Content>
