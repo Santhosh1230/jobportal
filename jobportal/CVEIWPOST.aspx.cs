@@ -144,5 +144,28 @@ namespace jobportal
 
 
         }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            con = new SqlConnection(ConStr);
+            con.Open();
+            string delete = "delete from cjob where JobId='" + id + "'";
+            cmd = new SqlCommand(delete, con);
+            int t = cmd.ExecuteNonQuery();
+            if (t > 0)
+            {
+                Response.Write("<script>alert('deletedted')</script>");
+            }
+            con.Close();
+            BindToGrid();
+
+        }
+
+        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            GridView1.EditIndex = -1;
+            BindToGrid();
+        }
     }
 }
